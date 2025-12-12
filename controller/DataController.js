@@ -1,4 +1,4 @@
-// Importing the model for controlling the data flow 
+    // Importing the model for controlling the data flow 
 import Data from '../model/Data.js'; 
 
 // Created a function for posting the new entry

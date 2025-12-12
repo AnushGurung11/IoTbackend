@@ -6,7 +6,9 @@ import DataRoutes from './routes/DataRoutes.js';
 dotenv.config(); 
 
 const app = express(); 
+app.use(express.json()); 
 app.use('/api', DataRoutes); 
+
 
 app.listen(process.env.PORT, ()=>{
     console.log("Listening to the port", process.env.PORT);
