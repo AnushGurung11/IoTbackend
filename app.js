@@ -13,4 +13,4 @@ app.listen(process.env.PORT, ()=>{
 mongoose
 .connect(process.env.MONGO_URL)
 .then(() => console.log("Connected to the DATABASE"))
-.catch((error) => console.log("Error occured", error)); 
+.catch((error) => console.log("Error occured", error));     
