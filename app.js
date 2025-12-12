@@ -1,10 +1,12 @@
 import express from 'express'; 
 import mongoose from 'mongoose';
 import  dotenv from 'dotenv'; 
+import DataRoutes from './routes/DataRoutes.js';
 
 dotenv.config(); 
 
 const app = express(); 
+app.use('/api', DataRoutes); 
 
 app.listen(process.env.PORT, ()=>{
     console.log("Listening to the port", process.env.PORT);
