@@ -26,3 +26,12 @@ export const getData = async(req, res)=>{
         res.status(500).json({ error: 'Failed to fetch data' });
     }
 }
+
+export const getCurrentData = async(req, res) =>{
+    try{
+        const currentData = await Data.findOne().sort({createdAt: -1});
+        res.status(200).json(currentData); 
+    }catch(error){
+        res.status(500).json({error:'failed to fetch data'})
+    }
+}
