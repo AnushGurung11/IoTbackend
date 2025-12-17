@@ -27,6 +27,7 @@ export const getData = async(req, res)=>{
     }
 }
 
+// This Function is not necessary, we can get te current data form getData function itself. 
 export const getCurrentData = async(req, res) =>{
     try{
         const currentData = await Data.findOne().sort({createdAt: -1});
@@ -35,3 +36,7 @@ export const getCurrentData = async(req, res) =>{
         res.status(500).json({error:'failed to fetch data'})
     }
 }
+
+
+// Basically aware message ko lagi, use backend validation and then send it to frontend using 
+// function. 
