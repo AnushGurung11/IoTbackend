@@ -16,6 +16,16 @@ export const addData = async (req, res) => {
     }
 }
 
+export const addtest = async (req, res) => {
+    try{
+        const {waterLevel, servoStatus} = req.body;
+        const newData = new Data({waterLevel, servoStatus}); 
+        console.log(newData);
+        res.status(201).json({message: 'Data saved shown successfully'}); 
+    }catch(error){
+        res.status(500).json({error: 'Failed to show data'});
+    }
+}
 
 // function for getting all the data from the data base
 export const getData = async(req, res)=>{

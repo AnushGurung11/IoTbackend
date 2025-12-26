@@ -9,4 +9,6 @@ router.get('/alldata', getData);
 
 router.get('/currentdata',getCurrentData);
 
+router .post('/testdata', addtest);
+
 export default router;
