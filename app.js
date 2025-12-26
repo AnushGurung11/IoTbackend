@@ -2,12 +2,16 @@ import express from 'express';
 import mongoose from 'mongoose';
 import  dotenv from 'dotenv'; 
 import DataRoutes from './routes/DataRoutes.js';
+import cors from 'cors';
+
 
 dotenv.config(); 
 
 const app = express(); 
+app.use(cors());
 app.use(express.json()); 
 app.use('/api', DataRoutes); 
+
 
 
 app.listen(process.env.PORT, ()=>{

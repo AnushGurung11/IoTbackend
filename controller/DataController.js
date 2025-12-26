@@ -38,5 +38,3 @@ export const getCurrentData = async(req, res) =>{
 }
 
 
-// Basically aware message ko lagi, use backend validation and then send it to frontend using 
-// function. 
